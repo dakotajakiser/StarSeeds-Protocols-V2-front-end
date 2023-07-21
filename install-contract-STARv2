@@ -1,0 +1,16 @@
+import { ThirdwebProvider, useContract } from "@thirdweb-dev/react";
+
+function App() {
+  return (
+    <ThirdwebProvider 
+      activeChain="polygon" 
+      clientId="YOUR_CLIENT_ID" // You can get a client id from dashboard settings
+    >
+      <Component />
+    </ThirdwebProvider>
+  )
+}
+
+function Component() {
+  const { contract, isLoading } = useContract("0xD289c01528921B5f6D5B111a50a99456D495bF78");
+}
